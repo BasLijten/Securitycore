@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Safecore.Web.Models.CommentModel>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+<table>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionID)
+        </td>
+        <td>
+            @Html.Raw(@item.Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserIdentifier)
+        </td>
+    </tr>
+    }
+</table>
