@@ -1,0 +1,7 @@
+﻿@model ISessionOverview
+    <ul>
+    @foreach (var item in Model.Children)
+    {
+        <li><a href="@item.Url">@item.SessionTitle</a> - by @item.Speaker</li>    
+    }
+</ul>

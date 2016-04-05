@@ -11,6 +11,11 @@
     <script>
             $('#searchTerm').val('@Html.Raw(item.SearchTitle)');
     </script>
+
+    <span>plain mvc encode</span>  @item.SearchTitle  <br />
+    <span>Html. encode</span>  @Html.DisplayFor(modelItem => item.SearchTitle)  <br />
+    <span>antixss encode false</span>  @AntiXssEncoder.HtmlEncode(item.SearchTitle, false); <br />
+    <span>antixss encode true</span>  @AntiXssEncoder.HtmlEncode(item.SearchTitle, true);
 }
 <table class="table">
     <tr>

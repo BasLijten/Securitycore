@@ -1,0 +1,29 @@
+﻿@using Sitecore.Mvc.Analytics.Extensions
+@inherits WebViewPage
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EvilcoreLayout</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <div class="header">
+        <form id="globalSearch" method="get" action="\SearchResults">
+            <input id="searchTerm" type="text" class="tftextinput" name="q" size="21" maxlength="120">
+            <input type="submit" value="search" class="tfbutton">
+        </form>
+        @Html.Sitecore().Placeholder("header-top")
+    </div>
+    <div class="main"> 
+        @Html.Sitecore().Placeholder("main-content")
+    </div>
+    <div class="footer">
+        @Html.Sitecore().Placeholder("footer")
+    </div>
+</body>
+</html>

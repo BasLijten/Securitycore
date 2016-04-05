@@ -29,16 +29,24 @@ namespace Safecore.Web.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetAllComments()
+        public IHttpActionResult GetAllItems()
         {
             var comments = db.Comments.ToList();           
             return new JsonResult<IList<CommentModel>>(comments, new JsonSerializerSettings(), Encoding.UTF8, this);
         }
 
         [HttpGet]
-        public IHttpActionResult GetAllItems(string SessionID)
+        public IHttpActionResult GetAllCommentsForSession(string SessionID)
         {
             var commentsQuery = db.Comments.Where(c => c.SessionID == SessionID);
+            var comments = commentsQuery.ToList();
+            return new JsonResult<IList<CommentModel>>(comments, new JsonSerializerSettings(), Encoding.UTF8, this);
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetAllCommentsForUser(string User)
+        {
+            var commentsQuery = db.Comments.SqlQuery(String.Format("Select * From dbo.CommentModels Where UserIdentifier like '{0}'", User));
             var comments = commentsQuery.ToList();
             return new JsonResult<IList<CommentModel>>(comments, new JsonSerializerSettings(), Encoding.UTF8, this);
         }

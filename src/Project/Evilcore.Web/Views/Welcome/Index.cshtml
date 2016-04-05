@@ -1,0 +1,31 @@
+﻿@model Evilcore.Web.Models.WelcomeModel
+
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<div>
+    <h4>WelcomeModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WelcomText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WelcomText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WelcomeTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WelcomeTitle)
+        </dd>
+
+    </dl>
+</div>
+

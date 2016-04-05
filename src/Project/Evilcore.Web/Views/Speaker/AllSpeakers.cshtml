@@ -1,0 +1,7 @@
+﻿@model ISpeakers
+    <ul>
+    @foreach (var item in Model.Children)
+    {
+        <li><a href="@item.Url">@item.Name</a> -  @item.Details</li>    
+    }
+</ul>
