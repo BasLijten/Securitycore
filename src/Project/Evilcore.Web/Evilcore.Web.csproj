@@ -162,6 +162,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\custom.1.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\main.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -174,11 +177,18 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Evilcore.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="images\Background.jpg" />
+    <Content Include="images\Safecore_Background.jpg" />
+    <Content Include="images\sugcon-europe-2015-larskeynote.jpg" />
+    <Content Include="images\sugcon-europe-2015-mikeedwards.jpg" />
+    <Content Include="images\sugcon-europe-2016-background.jpg" />
+    <Content Include="images\sugcon-europe-2016-logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Views\Comments\AddComment.cshtml" />
     <Content Include="Views\Comments\Index.cshtml" />
     <Content Include="Views\SearchResults\Index.cshtml" />
@@ -194,6 +204,9 @@
     <Content Include="Views\Sessions\AllSessions.cshtml" />
     <Content Include="Views\Speaker\AllSpeakers.cshtml" />
     <Content Include="Views\Speaker\SpeakerDetail.cshtml" />
+    <Content Include="Views\Shared\SafecoreLayout 2.cshtml" />
+    <Content Include="Views\Comments\GetCommentsForSession.cshtml" />
+    <Content Include="Views\Comments\SPAComments.cshtml" />
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -217,20 +230,11 @@
       <DependentUpon>201603271603265_CommentStatusAdded1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\ISpeakerDetails.cs" />
-    <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Controllers\SearchResultsController.cs" />
     <Compile Include="Controllers\SomeApiController.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="DAL\UserInteractionContext.cs" />
     <Compile Include="DAL\UserInteractionInitializer.cs" />
-    <Compile Include="Models\CommentsModel.cs" />
-    <Compile Include="Models\RegistrationInfo.cs" />
-    <Compile Include="Models\SearchResultsModel.cs" />
-    <Compile Include="Models\ISessionDetail.cs" />
-    <Compile Include="Models\UserModel.cs" />
-    <Compile Include="Models\VodeModel.cs" />
-    <Compile Include="Models\WelcomeModel.cs" />
     <Compile Include="Pipelines\AbortSitecoreApiServicesRouteForKnownRoutes.cs" />
     <Compile Include="Pipelines\PreprocessRequest\SafewebSuppressFormValidation.cs" />
     <Compile Include="Pipelines\RegisterHttpRoutes.cs" />
@@ -242,7 +246,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
-    <Folder Include="images\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\SomeApi\" />
   </ItemGroup>
@@ -250,6 +254,12 @@
     <EmbeddedResource Include="Migrations\201603271603265_CommentStatusAdded1.resx">
       <DependentUpon>201603271603265_CommentStatusAdded1.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Shared.csproj">
+      <Project>{fa26e081-0059-4f00-99d1-4581becb9ffd}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,5 +1,5 @@
 ﻿@using System.Web.Security
-@model IEnumerable<Evilcore.Web.Models.SearchResultsModel>
+@model IEnumerable<SearchResultsModel>
 
 @{
     ViewBag.Title = "SearchResults";
@@ -10,7 +10,7 @@
 @foreach (var item in Model)
 {
     <script>
-        $('#searchTerm').val('@item.SearchTitle');
+        $('#searchTerm').val('@Html.Raw(item.SearchTitle)');
 
     </script>
 

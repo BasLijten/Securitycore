@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Safecore.Web.DAL;
-using Safecore.Web.Models;
+using SitecoreSecurity.Web.Models;
 using Sitecore.Services.Core;
 using Sitecore.Services.Infrastructure.Web.Http;
 using System;

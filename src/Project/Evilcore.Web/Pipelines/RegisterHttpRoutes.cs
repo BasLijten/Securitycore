@@ -20,7 +20,7 @@ namespace Evilcore.Web.Pipelines
         private void Configure(HttpConfiguration configuration)
         {
             var routes = configuration.Routes;
-            routes.MapHttpRoute("DefaultApiRoute", "basapi/{controller}/{action}/{id}", new { action="Index", id=RouteParameter.Optional });
+            routes.MapHttpRoute("DefaultApiRoute", "api/{controller}/{action}/{id}", new { action="Index", id=RouteParameter.Optional });
         }
     }
 }

@@ -1,0 +1,184 @@
+﻿@using Sitecore.Mvc.Analytics.Extensions
+@inherits WebViewPage
+@{
+    Layout = null;
+}
+<html>
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://www.sugcon.eu/wp-content/uploads/2016/02/cropped-sugcon2016-siteicon.png" type="image/x-icon" />
+    <title>Sitecore User Group Conference Europe 2016</title>
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="~/css/bootstrap.css" />  
+    <link rel="stylesheet" type="text/css" href="\css\main.css" />
+    <link rel="stylesheet" type="text/css" href="\css\custom.1.css" />
+    <style type="text/css" title="dynamic-css" class="options-output"></style>
+
+    <!-- javascript -->    
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type='text/javascript' src='/Scripts/jquery-migrate.min.js?ver=1.2.1'></script>
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>    
+    <div id="page" class="hfeed site">
+        <header id="masthead" class="site-header header">
+            <div id="header-container">
+                <div id="navigation" class="container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="logo-wrapper">
+                                <a class="navbar-brand" href="/">
+                                    <img src="\images\sugcon-europe-2016-logo.png" alt="" class="enter-logo img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 woo-menu-item-add">
+                            <div id="main-menu" class="hidden-xs">
+                                <ul id="menu-main-menu" class="nav">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-70 current_page_item active has-menu-child"><a href="/">Home</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-menu-child">
+                                        <a href="http://www.sugcon.eu/info/">Info</a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-menu-child">
+                                                <a href="http://www.sugcon.eu/registration/">Registration</a>
+                                                <ul role="menu" class="sub-menu">
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="http://www.sugcon.eu/registration/registration-problems/">Registration problems?</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="http://www.sugcon.eu/info/testimonials/">Testimonials</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="http://www.sugcon.eu/info/justification-letter/">Justification Letter</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="http://www.sugcon.eu/community-awards/">Community Awards</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="http://www.sugcon.eu/info/sugcon-2015-photos/">SUGCON 2015 PHOTOS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="/speakers/">Speakers</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-menu-child">
+                                        <a href="/schedule/">Schedule</a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="/sessions/">Sessions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child"><a href="/all comments?status=approved">All comments</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page has-menu-child">
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <a href="/Logout">Logout</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="/Login">Login</a>
+                                        }
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <form action="\Search">
+
+                                <div class="input-group input-group-sm search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">Go!</button>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Search for ..." name="q">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="main">
+            <div class="sub-title" style="background-color:#fff;padding: 100px 0 90px;">
+                <div class="container">
+                    <div class="row">
+                        @Html.Sitecore().Placeholder("header-top")
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="sub-title-inner">
+                        <h2>
+                            @Html.Sitecore().Field("Title")
+                        </h2>
+                                    
+                        <ol class="breadcrumb">
+                            <li><i class="fa fa-home"></i></li>
+                            <li><a href="/" class="breadcrumb_home">Home</a></li>
+                            @{
+                                var parentItem = Html.Sitecore().CurrentItem;
+                                if (parentItem.Parent["Title"] == "Speakers" || parentItem.Parent["Title"] == "Sessions")
+                                {
+                                    <li><a href="/">@parentItem.Parent["Title"]</a></li>
+                                    <li class="active">@parentItem["Title"]</li>
+                                }
+                                else
+                                {
+                                    <li class="active">@parentItem["Title"]</li>
+                                }
+                            }
+
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="content" class="site-content" role="main">
+
+
+                    <div id="post-1011" class="post-1011 page type-page status-publish hentry">
+
+
+                        <div class="entry-content">
+                            <div class="vc_row wpb_row vc_row-fluid">
+                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                    <div class="vc_column-inner ">
+                                        <div class="wpb_wrapper">
+                                            <div class="wpb_text_column wpb_content_element ">
+                                                <div class="wpb_wrapper">
+                                                    <p style="text-align: center;">@Html.Sitecore().Field("Text")</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @Html.Sitecore().Placeholder("main-content")
+                        </div>
+                    </div>
+                </div> <!--/#content-->
+            </div>
+        </section>
+        <footer id="footer" class="footer-wrap">
+            <div class="footer-wrap-inner">
+                <div class="container">
+                    <div class="home row">
+                        <div class="col-sm-12">
+                            <a class="footer-logo" href="http://www.sugcon.eu">
+                                <img class="eventum-logo" src="/images/sugcon-europe-2016-logo-bigger.png" alt="" title="">
+                            </a>
+
+
+                            <span class="copyright">
+                                © 2016 SUGCON Europe 2016
+                            </span>
+
+
+                            <ul class="social-icons">
+                                <li><a target="_blank" href="https://twitter.com/SUG_NL"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+
+                        </div> <!-- end row -->
+                    </div> <!-- end row -->
+                </div> <!-- end container -->
+            </div>
+        </footer>
+    </div>            
+</body>
+</html>

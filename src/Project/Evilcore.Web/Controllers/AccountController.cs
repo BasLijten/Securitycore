@@ -1,11 +1,11 @@
-﻿using Evilcore.Web.Models;
-using Sitecore;
+﻿using Sitecore;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Model.Entities;
 using Sitecore.Diagnostics;
 using Sitecore.Exceptions;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Security.Authentication;
+using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +32,8 @@ namespace Evilcore.Web.Controllers
             var result = AuthenticationManager.Login(loginInfo.UserName, loginInfo.Password);
             if(result)
             {
-                IdentifyContact(loginInfo.UserName);                
+
+                IdentifyContact(Sitecore.Context.User.Name);                
             }
             
             return View();
@@ -41,14 +42,24 @@ namespace Evilcore.Web.Controllers
         private void IdentifyContact(string identifier)
         {
             var site = Context.Site;
-            var page = Context.Page;
-            var en = site.EnableAnalytics;
+            var page = Context.Page;            
             bool IsActive = (Tracker.Current != null && Tracker.Current.IsActive);
             try
             {
-                if (IsActive)
+                if (IsActive && !identifier.ToLower().Contains("anonymous"))
                 {
                     Tracker.Current.Session.Identify(identifier);
+                    switch (identifier.ToLower())
+                    {
+                        case "extranet\\robbert":
+                            SetContactCard("Robbert", "Hack");
+                            break;
+                        case "extranet\\bas":
+                            SetContactCard("Bas", "Lijten");
+                            break;
+                        default:
+                            break;
+                    }                        
                 }
             }
             catch (ItemNotFoundException ex)
@@ -56,6 +67,13 @@ namespace Evilcore.Web.Controllers
                 //Error can happen if previous user profile has been deleted
                 Log.Error($"Could not identify the user '{identifier}'", ex, this);
             }
+        }
+
+        private void SetContactCard(string firstName, string lastName)
+        {            
+            var contact = Tracker.Current.Contact.GetFacet<IContactPersonalInfo>("Personal");
+            contact.FirstName = firstName;
+            contact.Surname = lastName;
         }
 
         // not needed: manually provisioned via admin screen

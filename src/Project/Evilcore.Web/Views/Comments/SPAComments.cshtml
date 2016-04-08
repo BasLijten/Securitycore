@@ -1,0 +1,60 @@
+﻿@model ISessionDetail
+
+<script type="text/javascript" defer>
+    $(function () {
+        $("#submitcomment").submit(function (event) {
+            event.preventDefault();
+
+            var comment = {
+                SessionID: "@Model.SessionID",
+                Comment: $("#comment").val()
+            };
+
+            var jsonComment = JSON.stringify(comment);
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                url: "/basapi/SomeApi/AddComment",
+                data: jsonComment,
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (error) {
+                    jsonValue = jQuery.parseJSON(error.responseText);
+                    //jError('An error has occurred while saving the new part source: ' + jsonValue, { TimeShown: 3000 });
+                }
+            });            
+        });
+
+
+        $.getJSON("/basapi/SomeApi/GetAllCommentsForSession?SessionID=@Model.SessionID", function (data) {
+            $.each(data, function (index, value) {
+                $("#commentsList").append('<li>' + value.Comment+'</li>')
+            });
+        });
+    });    
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <ul class="commentsList" id="commentsList"></ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <form action="" id="submitcomment">
+                <div class="input-group input-group-sm search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Submit</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Comment..." name="comment" id="comment">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

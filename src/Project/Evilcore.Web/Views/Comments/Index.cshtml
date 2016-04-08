@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Evilcore.Web.Models.CommentModel>
+﻿@model IEnumerable<CommentModel>
 
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "All Comments";
 }
 
-<h2>View</h2>
+<h2>All Comments</h2>
 <table>
     @foreach (var item in Model)
     {
@@ -14,13 +14,7 @@
         </td>
         <td>
             @Html.Raw(@item.Comment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
+        </td>        
         <td>
             @Html.DisplayFor(modelItem => item.UserIdentifier)
         </td>

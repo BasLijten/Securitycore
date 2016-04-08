@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Evilcore.Web.DAL;
-using Evilcore.Web.Models;
 using Sitecore.Services.Core;
 using Sitecore.Services.Infrastructure.Web.Http;
 using System;
@@ -10,6 +9,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Results;
+using SitecoreSecurity.Web.Models;
 
 namespace Evilcore.Web.Controllers
 {        
@@ -70,6 +70,13 @@ namespace Evilcore.Web.Controllers
         //
         public IHttpActionResult AddComment(CommentModel model)
         {
+            model.Date = DateTime.Now;
+            model.Status = "unapproved";
+            if (Sitecore.Context.User.IsAuthenticated)
+                model.UserIdentifier = Sitecore.Context.User.Name;
+            else
+                model.UserIdentifier = "Anonymous";
+
             db.Comments.Add(model);
             db.SaveChanges();
             return new JsonResult<CommentModel>(model, new JsonSerializerSettings(), Encoding.UTF8, this);

@@ -166,6 +166,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\custom.1.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\roboto.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -176,6 +182,13 @@
     <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <None Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Evilcore_Background.jpg" />
+    <Content Include="images\Background.jpg" />
+    <Content Include="images\sugcon-europe-2015-larskeynote.jpg" />
+    <Content Include="images\sugcon-europe-2015-mikeedwards.jpg" />
+    <Content Include="images\sugcon-europe-2016-background.jpg" />
+    <Content Include="images\sugcon-europe-2016-logo-bigger.png" />
+    <Content Include="images\sugcon-europe-2016-logo.png" />
     <Content Include="package.json" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\deploy to IIS.pubxml" />
@@ -184,7 +197,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-migrate.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Views\Shared\SafecoreLayout.cshtml" />
     <None Include="Properties\PublishProfiles\safecore.pubxml" />
     <Content Include="Views\SearchResults\Index.cshtml" />
@@ -196,13 +211,22 @@
     <Content Include="Views\Welcome\Error.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Logout.cshtml" />
+    <Content Include="Views\Shared\SafecoreLayout 2.cshtml" />
+    <Content Include="Views\HiItsMe\HiItsMe.cshtml" />
+    <Content Include="Views\Sessions\AllSessions.cshtml" />
+    <Content Include="Views\Sessions\SessionDetails.cshtml" />
+    <Content Include="Views\Speaker\AllSpeakers.cshtml" />
+    <Content Include="Views\Speaker\SpeakerDetail.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\HiItsMeController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\SomeApiController.cs" />
     <Compile Include="DAL\UserInteractionInitializer.cs" />
     <Compile Include="Extensions\SessionExtensions.cs" />
@@ -211,18 +235,14 @@
       <DependentUpon>201603271558060_AddModelStatus1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\CommentsModel.cs" />
     <Compile Include="Controllers\SearchResultsController.cs" />
-    <Compile Include="Models\LoginInfo.cs" />
-    <Compile Include="Models\UserModel.cs" />
-    <Compile Include="Models\VodeModel.cs" />
     <Compile Include="Controllers\WelcomeController.cs" />
     <Compile Include="DAL\UserInteractionContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\SearchResultsModel.cs" />
-    <Compile Include="Models\WelcomeModel.cs" />
+    <Compile Include="Pipelines\AbortSitecoreApiServicesRouteForKnownRoutes.cs" />
+    <Compile Include="Pipelines\HttpRequestProcessor\AddSecurityHeaders.cs" />
     <Compile Include="Pipelines\PreprocessRequest\SafewebSuppressFormValidation.cs" />
     <Compile Include="Pipelines\RegisterHttpRoutes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -244,6 +264,12 @@
     <EmbeddedResource Include="Migrations\201603271558060_AddModelStatus1.resx">
       <DependentUpon>201603271558060_AddModelStatus1.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Shared.csproj">
+      <Project>{fa26e081-0059-4f00-99d1-4581becb9ffd}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

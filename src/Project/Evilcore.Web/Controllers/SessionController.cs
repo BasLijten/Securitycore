@@ -1,7 +1,7 @@
-﻿using Evilcore.Web.Models;
-using Glass.Mapper.Sc;
+﻿using Glass.Mapper.Sc;
 using Sitecore;
 using Sitecore.Mvc.Presentation;
+using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,6 @@ namespace Evilcore.Web.Controllers
 
         public ActionResult AllSessions()
         {
-
             var context = new SitecoreContext();            
             var currentItem = context.GetCurrentItem<ISessionOverview>();            
             return View(currentItem);

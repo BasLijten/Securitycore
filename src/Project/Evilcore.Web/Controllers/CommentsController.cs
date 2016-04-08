@@ -1,6 +1,7 @@
 ﻿using Evilcore.Web.DAL;
-using Evilcore.Web.Models;
+using Glass.Mapper.Sc;
 using Sitecore.Mvc.Presentation;
+using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -58,7 +59,7 @@ namespace Evilcore.Web.Controllers
         }
         
         public ActionResult AddComment()
-        {
+        {            
             return View();
         }
 
@@ -66,17 +67,23 @@ namespace Evilcore.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddComment(CommentModel model)
         {
-            IView pageView = PageContext.Current.PageView;
-            if(pageView==null)
-            {
-                return null;
-            }
+            var isAuthenticated = Sitecore.Context.User.IsAuthenticated;
+            var context = new SitecoreContext();
+            var currentItem = context.GetCurrentItem<ISessionDetail>();
+
+            model.Status = "unapproved";
+            model.Date = DateTime.Now;
+            model.SessionID = currentItem.SessionID.ToString();
+            if (!isAuthenticated)
+                model.UserIdentifier = "Anonymous";
             else
             {
-                db.Comments.Add(model);
-                db.SaveChanges();
-                return View(model);
-            }          
+                model.UserIdentifier = Sitecore.Context.User.Name;
+            }
+
+            db.Comments.Add(model);
+            db.SaveChanges();
+            return View(model);                      
         }
 
         public ActionResult LastComment()
@@ -86,6 +93,22 @@ namespace Evilcore.Web.Controllers
                           orderby c.ID descending
                           select c).First();                
             return View(result);
+        }
+
+        public ActionResult GetCommentsForSession()
+        {            
+            var context = new SitecoreContext();
+            var currentItem = context.GetCurrentItem<ISessionDetail>();
+            var comments = db.Comments.Where(c => c.SessionID == currentItem.SessionID.ToString()).ToList();
+
+            return View(comments);
+        }
+
+        public ActionResult SPAComments()
+        {
+            var ctx = new SitecoreContext();
+            var currentItem = ctx.GetCurrentItem<ISessionDetail>(); 
+            return View(currentItem);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Safecore.Web.Models;
-using Sitecore;
+﻿using Sitecore;
 using Sitecore.Analytics;
 using Sitecore.Diagnostics;
 using Sitecore.Exceptions;
@@ -11,6 +10,7 @@ using System.Linq;
 using System.Web;
 using Safecore.Web.Extensions;
 using System.Web.Mvc;
+using SitecoreSecurity.Web.Models;
 
 namespace Safecore.Web.Controllers
 {

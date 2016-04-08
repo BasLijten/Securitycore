@@ -1,6 +1,6 @@
 ﻿using Safecore.Web.DAL;
-using Safecore.Web.Models;
 using Sitecore.Mvc.Presentation;
+using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
