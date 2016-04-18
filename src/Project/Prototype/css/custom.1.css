@@ -1,0 +1,44 @@
+body{font-family:Roboto;font-weight:300;font-style:normal;color:#333;font-size:16px;}#main-menu .nav>li>a, #main-menu ul.sub-menu li > a{font-family:Roboto;font-weight:500;font-style:normal;color:#fff;font-size:14px;}h1{font-family:Roboto;font-weight:700;font-style:normal;color:#000;font-size:42px;}h2{font-family:Roboto;font-weight:700;font-style:normal;color:#000;font-size:36px;}h3{font-family:Roboto;font-weight:700;font-style:normal;color:#000;font-size:24px;}h4{font-family:Roboto;font-weight:700;font-style:normal;color:#000;font-size:20px;}h5{font-family:Roboto;font-weight:700;font-style:normal;color:#000;font-size:18px;}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1455132082102{padding-top: 334px !important;padding-bottom: 250px !important;background-image: url(http://www.sugcon.eu/wp-content/uploads/2016/02/sugcon-europe-2016-background.jpg?id=674) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1451643690338{margin-top: 70px !important;margin-bottom: 100px !important;}.vc_custom_1451643690338{margin-top: 70px !important;margin-bottom: 100px !important;}.vc_custom_1451643707161{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 70px !important;padding-bottom: 100px !important;background-image: url(http://demo.themeum.com/wordpress/eventum/wp-content/uploads/2015/09/who-is-speaking.png?id=437) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1451643723698{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 70px !important;padding-bottom: 100px !important;background-image: url(http://demo.themeum.com/wordpress/eventum/wp-content/uploads/2015/09/home-sponsors-bg.jpg?id=152) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1455809699923{margin-bottom: 0px !important;}.vc_custom_1458299376742{margin-left: 0px !important;}.vc_custom_1444117965172{margin-bottom: 0px !important;}.vc_custom_1456826585806{margin-bottom: 30px !important;}
+
+.homepage.row  {
+    margin-top:400px;
+}
+
+.row.news {
+    margin-top:90px;
+}
+.row.news:first-child {
+    margin-top:450px;
+}
+
+section {
+    display:block;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+    color: #333;
+    font-size: 16px;
+}
+.site-header {
+    padding-bottom: 0px;
+}
+
+.site-header {
+    min-height: 60px;
+}
+
+.header {
+    background: #aa162c !important; 
+    background-color: #aa162c;
+}
+
+.search {
+        margin-top: 15px;
+}

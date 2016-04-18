@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+        "--no-color"
+    ],
+    "tasks": [
+        {
+            "taskName": "hello",
+            "args":[],
+            "isBuildCommand": true,
+            "problemMatcher": "$msCompile" 
+        },
+        {
+            "taskName": "copy-css",
+            "args":[],
+            "isBuildCommand": false
+        },
+        {
+            "taskName": "webserver",
+            "isBuildCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "browser",
+            "echoCommand": true
+        }     
+    ]
+}

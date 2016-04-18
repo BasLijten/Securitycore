@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{507451CD-42D0-4E89-B126-2BFC1918E110}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{7B6374A4-3A6A-4E19-B6F4-2D5BBE752B7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{A817CD2D-BE23-44F6-B685-7160128B11CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{6C32A1A2-FFBC-41BC-83E4-71A11449CF40}"
+	ProjectSection(SolutionItems) = preProject
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Safecore.Web", "src\Project\Safecore.Web\Safecore.Web.csproj", "{3E55D7C0-AC73-41FE-AC6A-68101DB31F9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evilcore.Web", "src\Project\Evilcore.Web\Evilcore.Web.csproj", "{CAFB9EAF-6764-4014-90D0-F10004419D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{FA26E081-0059-4F00-99D1-4581BECB9FFD}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "TDS.Evilcore", "TDS.Evilcore\TDS.Evilcore.scproj", "{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "TDS.Safecore", "src\Project\TDS.Safecore\TDS.Safecore.scproj", "{67A9A838-574C-442A-AFC1-4E93DA812E2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E55D7C0-AC73-41FE-AC6A-68101DB31F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E55D7C0-AC73-41FE-AC6A-68101DB31F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E55D7C0-AC73-41FE-AC6A-68101DB31F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E55D7C0-AC73-41FE-AC6A-68101DB31F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFB9EAF-6764-4014-90D0-F10004419D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFB9EAF-6764-4014-90D0-F10004419D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFB9EAF-6764-4014-90D0-F10004419D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFB9EAF-6764-4014-90D0-F10004419D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA26E081-0059-4F00-99D1-4581BECB9FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA26E081-0059-4F00-99D1-4581BECB9FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA26E081-0059-4F00-99D1-4581BECB9FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA26E081-0059-4F00-99D1-4581BECB9FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E55D7C0-AC73-41FE-AC6A-68101DB31F9E} = {507451CD-42D0-4E89-B126-2BFC1918E110}
+		{CAFB9EAF-6764-4014-90D0-F10004419D5C} = {507451CD-42D0-4E89-B126-2BFC1918E110}
+		{FA26E081-0059-4F00-99D1-4581BECB9FFD} = {507451CD-42D0-4E89-B126-2BFC1918E110}
+		{E317C90E-9FEA-4DB9-A4CF-C1AC885255F4} = {507451CD-42D0-4E89-B126-2BFC1918E110}
+		{67A9A838-574C-442A-AFC1-4E93DA812E2C} = {507451CD-42D0-4E89-B126-2BFC1918E110}
+	EndGlobalSection
+EndGlobal

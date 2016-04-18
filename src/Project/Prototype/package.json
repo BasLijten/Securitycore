@@ -1,0 +1,8 @@
+{
+    "devDependencies": {
+        "bootstrap": "^3.3.6",
+        "gulp": "^3.9.1",
+        "gulp-dest": "^0.2.3",
+        "gulp-debug": "^2.1.2"      
+    }
+}
