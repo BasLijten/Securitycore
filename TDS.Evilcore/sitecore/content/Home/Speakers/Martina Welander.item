@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {E7752057-D890-464A-B159-53DE20395D6F}
+database: master
+path: /sitecore/content/Home/Speakers/Martina Welander
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: Martina Welander
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: 1ef40afa-085a-4971-a716-1bf78099f61c
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 16
+
+Martina Welander
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 16
+
+Martina Welander
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 41
+
+Technical Consulting Engineer - @Sitecore
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 173
+
+<image mediapath="" alt="martinawelander-1" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{F0B6352B-370D-4301-B9D7-B993E83A9703}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160327T152938Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1ef40afa-085a-4971-a716-1bf78099f61c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160406T215343Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

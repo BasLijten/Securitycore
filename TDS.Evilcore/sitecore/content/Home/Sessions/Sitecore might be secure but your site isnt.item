@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {8A47AA4D-25A7-4AF9-934F-D0B5C58039EE}
+database: master
+path: /sitecore/content/Home/Sessions/Sitecore might be secure but your site isnt
+parent: {14A7D534-3464-4BEE-84B9-334D984F1D64}
+name: Sitecore might be secure but your site isnt
+master: {00000000-0000-0000-0000-000000000000}
+template: {9FE0C609-F841-43AD-A952-FEF80C14C570}
+templatekey: Session
+
+----version----
+language: en
+version: 1
+revision: 9e36b059-9e84-45eb-8026-caeaa41ef0ff
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 43
+
+Sitecore might be secure but your site isnt
+----field----
+field: {7BA87A98-47A6-4AFA-AF80-0AAE78E3760A}
+name: Session Name
+key: session name
+content-length: 43
+
+Sitecore might be secure but your site isnt
+----field----
+field: {C055AA9D-8A0F-4902-910B-7183249DDF4F}
+name: Session Description
+key: session description
+content-length: 330
+
+A Sitecore installation might be hardenend, but this doesn’t guarantee you a safe website.  This session will explain the basics on secure application development for Sitecore. Using a lot of demos, I’ll show common vulnerabilities, the root causes of them and how to fix them. In the end you know what to do to write secure code!
+----field----
+field: {4CC9D1FD-42B7-4B52-BBED-E6FB57A08F3F}
+name: Session Speaker
+key: session speaker
+content-length: 38
+
+{66A38763-4C0C-45B8-8A9D-E2C9CC00A062}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160327T121153Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9e36b059-9e84-45eb-8026-caeaa41ef0ff
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160406T215125Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

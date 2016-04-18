@@ -1,0 +1,83 @@
+----item----
+version: 1
+id: {CD830069-3304-4EF7-9A05-4D75642FB038}
+database: master
+path: /sitecore/content/Home/Speakers/Kam Figy
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: Kam Figy
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: b1894946-c9b1-4a14-8b13-30e48a9fdc64
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 8
+
+Kam Figy
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 8
+
+Kam Figy
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 96
+
+The Notorious F.I.G. - Sitecore MVP & creator Unicorn - @ Connective DX (formerly ISITE Design) 
+----field----
+field: {66E99AFA-DF66-4FD5-B70C-0527A22515C0}
+name: Biography
+key: biography
+content-length: 395
+
+Web: Lead developer on sites that have won MITX, IMA, and Sitecore Site of the Year awards. Specializing in .NET architecture and Sitecore CMS.
+
+IT: Competent sysadmin with extensive administrative experience around IIS, SQL Server, and Active Directory with a sprinkling of Linux.
+
+Specialties: Web & CMS Architecture, ASP.NET (C#), T-SQL, Sitecore, Ektron, jQuery, Server Administration/IT
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 177
+
+<image mediapath="" alt="bliing-bling-figy_480" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{0AE1D4EC-328F-47EA-ACBF-36FA0C6584CF}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160411T203413Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b1894946-c9b1-4a14-8b13-30e48a9fdc64
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160411T203548Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

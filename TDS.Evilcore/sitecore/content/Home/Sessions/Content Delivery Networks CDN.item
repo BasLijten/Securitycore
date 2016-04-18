@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {17A3308A-C7C6-4176-B0FE-BCD3350F1470}
+database: master
+path: /sitecore/content/Home/Sessions/Content Delivery Networks CDN
+parent: {14A7D534-3464-4BEE-84B9-334D984F1D64}
+name: Content Delivery Networks CDN
+master: {00000000-0000-0000-0000-000000000000}
+template: {9FE0C609-F841-43AD-A952-FEF80C14C570}
+templatekey: Session
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 341
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{4602899E-AD0F-426A-930E-BB9D62143944}"><p:d /></r><r uid="{D2BE2701-AA4B-47F7-A089-F91550907B1F}" p:after="*[1=2]" s:id="{EC7552C2-DFE1-4998-B439-C873722432D6}" s:ph="main-content" /><r uid="{6C59D6F7-2E4A-4F0A-865C-A5C4261FDC66}"><p:d /></r></d></r>
+----version----
+language: en
+version: 1
+revision: 76148b87-958c-466d-a51f-325f480ebd8d
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 32
+
+Content Delivery Networks (CDN) 
+----field----
+field: {7BA87A98-47A6-4AFA-AF80-0AAE78E3760A}
+name: Session Name
+key: session name
+content-length: 32
+
+Content Delivery Networks (CDN) 
+----field----
+field: {C055AA9D-8A0F-4902-910B-7183249DDF4F}
+name: Session Description
+key: session description
+content-length: 145
+
+A global presence requires global delivery. Your site might be fast from your office but what about your users on the opposite side of the world?
+----field----
+field: {4CC9D1FD-42B7-4B52-BBED-E6FB57A08F3F}
+name: Session Speaker
+key: session speaker
+content-length: 38
+
+{9E888962-8E70-4F2E-B58D-1F8A0D53BF90}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160407T152943Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+76148b87-958c-466d-a51f-325f480ebd8d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160409T103741Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

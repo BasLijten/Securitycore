@@ -1,0 +1,81 @@
+----item----
+version: 1
+id: {5657738E-0A58-432E-9802-57CB8BFD92AB}
+database: master
+path: /sitecore/content/Home/Speakers/Todd Mitchell
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: Todd Mitchell
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: 1391bb09-edec-4226-9246-47e1ee0f0ae6
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 13
+
+Todd Mitchell
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 13
+
+Todd Mitchell
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 48
+
+Technical Product Owner Sitecore xDB - @Sitecore
+----field----
+field: {66E99AFA-DF66-4FD5-B70C-0527A22515C0}
+name: Biography
+key: biography
+content-length: 195
+
+Experienced software architect and designer with a love for delivering products using pragmatic means.
+
+Currently focused on developing next gen capabilities for Sitecore’s Experience Database.
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 185
+
+<image mediapath="" alt="lionel-richie-hello-flyer-602" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{99F8F920-D7ED-46D2-9D7F-DBEA90B2D080}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160406T213423Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1391bb09-edec-4226-9246-47e1ee0f0ae6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160407T170217Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

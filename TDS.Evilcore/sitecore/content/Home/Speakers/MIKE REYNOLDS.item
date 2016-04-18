@@ -1,0 +1,81 @@
+----item----
+version: 1
+id: {8217B2D9-31B3-4324-B382-E032EE50F1A0}
+database: master
+path: /sitecore/content/Home/Speakers/MIKE REYNOLDS
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: MIKE REYNOLDS
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: 3c7efbd7-ae65-4448-beeb-b23467744b0a
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 13
+
+Mike Reynolds
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 13
+
+Mike Reynolds
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 33
+
+Sitecore Architect / Sitecore MVP
+----field----
+field: {66E99AFA-DF66-4FD5-B70C-0527A22515C0}
+name: Biography
+key: biography
+content-length: 428
+
+Michael Reynolds, a Sitecore MVP with almost nine years of Sitecore architecture and development experience, is an independent consultant with a proven track record of pushing the envelope of the Sitecore platform to deliver best-of-breed solutions for clients.
+
+A well-known thought leader in the Sitecore community, Reynolds was recognized as a Sitecore Technology MVP in 2014, 2015 and 2016 for his community contributions.
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 58
+
+<image mediaid="{F2CCB878-2AAC-4A20-8B60-1A7C4DE598AB}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160406T213505Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3c7efbd7-ae65-4448-beeb-b23467744b0a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160406T215406Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

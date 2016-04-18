@@ -1,0 +1,85 @@
+----item----
+version: 1
+id: {9E888962-8E70-4F2E-B58D-1F8A0D53BF90}
+database: master
+path: /sitecore/content/Home/Speakers/Kamruz Jaman
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: Kamruz Jaman
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: 2d0a519a-24d8-4ce3-a888-132e215be3a3
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 12
+
+Kamruz Jaman
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 12
+
+Kamruz Jaman
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 41
+
+Sitecore MVP & Sitecore Consultant - @ARM
+----field----
+field: {66E99AFA-DF66-4FD5-B70C-0527A22515C0}
+name: Biography
+key: biography
+content-length: 880
+
+I have over ten years development experience building dynamically driven web based and desktop applications. I have experience of the full project lifecycle from feasibility, analysis, development and team management to hand-over including preparation of specifications, budgets and project plans as well as other formal documentation and client liaison during the project. I am highly skilled in front end design and browser manipulation using advanced HTML, CSS and Javacript/jQuery techniques.
+
+I am experienced in working with various development methodologies including waterfall and Agile, making use of SCRUM, storyboarding and sprint techniques. I have made extensive use of Web 2.0 technologies to develop highly responsive websites using Sitecore CMS and ASP.Net using C#.
+
+Sitecore Technical MVP 2013-2016
+
+Specialties: Sitecore CMS, ASP.Net C#, jQuery, CSS, HTML
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 58
+
+<image mediaid="{FE24823C-5F21-4BA9-B625-806578B9B0CD}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160406T212149Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2d0a519a-24d8-4ce3-a888-132e215be3a3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160406T215407Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
