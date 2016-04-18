@@ -10,13 +10,14 @@ using System.Text;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Results;
+using System.Data.SqlClient;
 
 namespace Safecore.Web.Controllers
 {        
-    public class SomeApiController : ServicesApiController
+    public class CommentsApiController : ServicesApiController
     {
         private UserInteractionContext db = new UserInteractionContext();
-        public SomeApiController()
+        public CommentsApiController()
         {
             db.Database.Log = Console.Write;
         }
@@ -40,13 +41,18 @@ namespace Safecore.Web.Controllers
         {
             var commentsQuery = db.Comments.Where(c => c.SessionID == SessionID);
             var comments = commentsQuery.ToList();
+            foreach(var c in comments)
+            {
+                c.Comment = c.Comment;
+            }
             return new JsonResult<IList<CommentModel>>(comments, new JsonSerializerSettings(), Encoding.UTF8, this);
         }
 
         [HttpGet]
         public IHttpActionResult GetAllCommentsForUser(string User)
         {
-            var commentsQuery = db.Comments.SqlQuery(String.Format("Select * From dbo.CommentModels Where UserIdentifier like '{0}'", User));
+            var user = new SqlParameter("User", User);
+            var commentsQuery = db.Comments.SqlQuery("Select * From dbo.CommentModels Where UserIdentifier like {0}", user);
             var comments = commentsQuery.ToList();
             return new JsonResult<IList<CommentModel>>(comments, new JsonSerializerSettings(), Encoding.UTF8, this);
         }

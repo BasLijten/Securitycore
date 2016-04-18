@@ -18,11 +18,7 @@ namespace Safecore.Web.Controllers
     {
         // GET: Login
         public ActionResult Login()
-        {
-            if (Tracker.Current != null && Tracker.Current.IsActive)
-            {
-
-            }
+        {           
             return View();
         }
 

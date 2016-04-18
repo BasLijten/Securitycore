@@ -26,6 +26,7 @@ namespace SitecoreSecurity.Web.Models
         [SitecoreId]
         Guid SessionID { get; set; }        
         string Url { get; set; }
+        IEnumerable<CommentModel> Comments { get; set; }
     }
 
     [SitecoreType(AutoMap =true)]

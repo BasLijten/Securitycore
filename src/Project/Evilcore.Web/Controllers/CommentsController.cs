@@ -15,6 +15,7 @@ namespace Evilcore.Web.Controllers
     public class CommentsController : Controller
     {
         private string connectionString = @"Data Source=.\;Initial Catalog=UserInteractions;Database=UserInteractions;uid=sa;pwd=12345";
+        private string connectionString2 = @"Data Source=.\;Initial Catalog=UserInteractions;Database=UserInteractions;uid=UserInteractionDB2;pwd=User12345DB";
         private UserInteractionContext db = new UserInteractionContext();
         // GET: Comments
         public ActionResult Index(string status)
@@ -57,7 +58,44 @@ namespace Evilcore.Web.Controllers
             
             return View(comments);
         }
-        
+
+        public ActionResult AllComments(string status)
+        {
+            var sqlQuery = "SELECT * FROM CommentModels";
+            if (!String.IsNullOrEmpty(status))
+                sqlQuery += String.Format(" WHERE Status like '{0}' ORDER BY Date DESC", status);
+            else
+                sqlQuery += " ORDER BY Date DESC";
+
+
+            IList<CommentModel> comments = new List<CommentModel>();
+            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString2))
+            {
+                sqlConnection1.Open();
+                using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection1))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        comments.Add(new CommentModel
+                        {
+                            Comment = reader.GetString(2),
+                            Date = reader.GetDateTime(3),
+                            Status = reader.GetString(5),
+                            UserIdentifier = reader.GetString(4),
+                            SessionID = reader.GetString(1)
+                        });
+                    }
+                }
+
+
+
+
+
+            }
+            return View(comments);
+        }
+
         public ActionResult AddComment()
         {            
             return View();
@@ -107,7 +145,9 @@ namespace Evilcore.Web.Controllers
         public ActionResult SPAComments()
         {
             var ctx = new SitecoreContext();
-            var currentItem = ctx.GetCurrentItem<ISessionDetail>(); 
+            var currentItem = ctx.GetCurrentItem<ISessionDetail>();
+            var comments = db.Comments.Where(c => c.SessionID == currentItem.SessionID.ToString());
+            currentItem.Comments = comments;
             return View(currentItem);
         }
     }

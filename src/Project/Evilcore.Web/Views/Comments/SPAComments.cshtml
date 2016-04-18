@@ -16,10 +16,10 @@
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                url: "/basapi/SomeApi/AddComment",
+                url: "/api/CommentsApi/AddComment",
                 data: jsonComment,
                 success: function (data) {
-                    alert(data);
+                    location.reload(true);
                 },
                 error: function (error) {
                     jsonValue = jQuery.parseJSON(error.responseText);
@@ -29,20 +29,23 @@
         });
 
 
-        $.getJSON("/basapi/SomeApi/GetAllCommentsForSession?SessionID=@Model.SessionID", function (data) {
+        @*$.getJSON("/api/SomeApi/GetAllCommentsForSession?SessionID=@Model.SessionID", function (data) {
             $.each(data, function (index, value) {
                 $("#commentsList").append('<li>' + value.Comment+'</li>')
             });
-        });
+        });*@
     });    
 </script>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <ul class="commentsList" id="commentsList"></ul>
+<h2>Comments</h2>
+<div class="container">    
+    @foreach (var item in Model.Comments)
+    {
+        <div class="row">
+            <div class="col-sm-2">@item.UserIdentifier</div>
+            <div class="col-sm-5">@Html.Raw(item.Comment)</div>
         </div>
-    </div>
+    }                        
 </div>
 <div class="container">
     <div class="row">

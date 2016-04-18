@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<CommentModel>
 
 <h2>Comments</h2>
-@foreach (var item in Model)
-{ 
-    <div>
-        @item.Comment<br />
-        by @item.UserIdentifier<br />
-    </div>
-}
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-sm-2">@item.UserIdentifier</div>
+            <div class="col-sm-5">@Html.Raw(item.Comment)</div>
+        </div>
+    }
+</div>

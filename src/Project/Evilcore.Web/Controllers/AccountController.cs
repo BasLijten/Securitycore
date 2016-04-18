@@ -18,11 +18,7 @@ namespace Evilcore.Web.Controllers
     {
         // GET: Login
         public ActionResult Login()
-        {
-            if(Tracker.Current!=null && Tracker.Current.IsActive)
-            {
-                
-            }
+        {            
             return View();
         }
 
@@ -51,6 +47,9 @@ namespace Evilcore.Web.Controllers
                     Tracker.Current.Session.Identify(identifier);
                     switch (identifier.ToLower())
                     {
+                        case "extranet\\kam":
+                            SetContactCard("Notorious", "F.I.G.");
+                            break;
                         case "extranet\\robbert":
                             SetContactCard("Robbert", "Hack");
                             break;
@@ -72,8 +71,34 @@ namespace Evilcore.Web.Controllers
         private void SetContactCard(string firstName, string lastName)
         {            
             var contact = Tracker.Current.Contact.GetFacet<IContactPersonalInfo>("Personal");
+            
             contact.FirstName = firstName;
             contact.Surname = lastName;
+            if (firstName.ToLower() == "robbert")
+            {
+                SetCountry("The Netherlands");
+            }
+
+            if(firstName.ToLower()=="bas")
+            {
+                SetCountry("Brabant ;)");
+            }
+
+            if(firstName.ToLower()=="notorious")
+            {
+                SetCountry("Portland Oregon, USA");
+            }
+
+        }
+
+        private void SetCountry(string country)
+        {
+            string addressType = "primary";
+            var addresses = Tracker.Current.Contact.GetFacet<IContactAddresses>("Addresses");
+            if (!addresses.Entries.Contains("primary"))
+                addresses.Entries.Create("primary");
+            var primaryAddress = addresses.Entries["primary"];
+            primaryAddress.Country = country;
         }
 
         // not needed: manually provisioned via admin screen

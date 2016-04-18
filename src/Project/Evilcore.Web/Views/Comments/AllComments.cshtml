@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CommentModel>
+
+@{
+    ViewBag.Title = "All Comments";
+}
+
+<h2>All Comments</h2>
+<table>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionID)
+        </td>
+        <td>
+            @Html.Raw(@item.Comment)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.UserIdentifier)
+        </td>
+    </tr>
+    }
+</table>

@@ -191,7 +191,6 @@
     <Content Include="images\sugcon-europe-2016-logo.png" />
     <Content Include="package.json" />
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\deploy to IIS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -217,6 +216,9 @@
     <Content Include="Views\Sessions\SessionDetails.cshtml" />
     <Content Include="Views\Speaker\AllSpeakers.cshtml" />
     <Content Include="Views\Speaker\SpeakerDetail.cshtml" />
+    <Content Include="Views\Comments\GetCommentsForSession.cshtml" />
+    <Content Include="Views\Comments\LastComment.cshtml" />
+    <Content Include="Views\Comments\SPAComments.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -227,7 +229,8 @@
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HiItsMeController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
-    <Compile Include="Controllers\SomeApiController.cs" />
+    <Compile Include="Controllers\CommentsApiController.cs" />
+    <Compile Include="Controllers\SpeakerController.cs" />
     <Compile Include="DAL\UserInteractionInitializer.cs" />
     <Compile Include="Extensions\SessionExtensions.cs" />
     <Compile Include="Migrations\201603271558060_AddModelStatus1.cs" />

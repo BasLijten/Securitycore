@@ -9,7 +9,7 @@
 @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post)) 
 {
     @Html.AntiForgeryToken()
-    @Html.Sitecore().FormHandler()
+    @Html.Sitecore().FormHandler()    
     <div class="form-horizontal">        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })       

@@ -13,21 +13,10 @@ using SitecoreSecurity.Web.Models;
 
 namespace Evilcore.Web.Controllers
 {        
-    public class SomeApiController : ServicesApiController
+    public class CommentsApiController : ServicesApiController
     {
         private UserInteractionContext db = new UserInteractionContext();
-        public SomeApiController()
-        {
-            db.Database.Log = Console.Write;
-        }
-        // GET: SomeApi
-        [HttpGet]
-        public IHttpActionResult GetItems(int id)
-        {
-            var comment = new CommentModel { Comment = "a" };
-            return new JsonResult<CommentModel>(comment, new JsonSerializerSettings(), Encoding.UTF8, this);
-        }
-
+                        
         [HttpGet]
         public IHttpActionResult GetAllItems()
         {

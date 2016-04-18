@@ -1,0 +1,85 @@
+----item----
+version: 1
+id: {9F9B2194-FE51-47EF-ABB4-5840D132C79F}
+database: master
+path: /sitecore/templates/Safecore/Session/__Standard Values
+parent: {9FE0C609-F841-43AD-A952-FEF80C14C570}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {9FE0C609-F841-43AD-A952-FEF80C14C570}
+templatekey: Session
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 465
+
+<r>
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{2D3A3C8B-4A13-436E-A6BD-10506410DFE0}">
+    <r id="{8825D7B3-2808-46FD-8FEA-08CF37D9695B}" ph="main-content" uid="{8AB46F41-5AFF-4785-9DB0-38428F07A059}" />
+    <r id="{9EBEFB31-3D01-4E68-B4AA-21732DBA56A0}" ph="main-content" uid="{4602899E-AD0F-426A-930E-BB9D62143944}" />
+    <r id="{29DFBA86-428F-44E7-893D-A8C29887D0A7}" ph="main-content" uid="{6C59D6F7-2E4A-4F0A-865C-A5C4261FDC66}" />
+  </d>
+</r>
+----version----
+language: en
+version: 1
+revision: caff30b5-54c6-448c-bd52-5d773b4c40f0
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 5
+
+$name
+----field----
+field: {7BA87A98-47A6-4AFA-AF80-0AAE78E3760A}
+name: Session Name
+key: session name
+content-length: 5
+
+$name
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160327T120913Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+caff30b5-54c6-448c-bd52-5d773b4c40f0
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160407T173933Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

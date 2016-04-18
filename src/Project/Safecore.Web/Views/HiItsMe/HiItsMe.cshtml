@@ -1,10 +1,16 @@
-﻿@if(String.IsNullOrEmpty(ViewBag.Name))
+﻿@if (!Sitecore.Context.User.IsAuthenticated)
 {
     <div>Hello Anonymous</div>
 }
-else
+else if (Sitecore.Context.User.IsAuthenticated)
 {
-    <div>@ViewBag.Name</div>
+    <div class="row">
+        <div>identity: @ViewBag.UserName</div>
+    </div>
+    <div class="row">
+        <div>XDB info: name: @ViewBag.Name, location: @ViewBag.Location, creditcard: ???</div>
+    </div>
+
 }
 
 
