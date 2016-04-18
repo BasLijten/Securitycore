@@ -1,0 +1,89 @@
+----item----
+version: 1
+id: {ADB8B029-8DF5-4028-8E29-6D672C0C244A}
+database: master
+path: /sitecore/content/Home/Speakers/Robbert Hack
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: Robbert Hack
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: bf3a14c3-e72c-47e2-896c-cd16f04d9e62
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 12
+
+Robbert Hack
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 12
+
+Robbert Hack
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 82
+
+KAYEE Sitecore MVP 2010-2015 | Co-Founder Sitecore User Group Netherlands (SUGNL) 
+----field----
+field: {66E99AFA-DF66-4FD5-B70C-0527A22515C0}
+name: Biography
+key: biography
+content-length: 602
+
+Robbert Hock is a Sitecore developer since 2008, co-founder of the SUGNL and a Sitecore MVP for 7 years (!). In 2011, he founded the company Kayee. 
+He has several microsoft certifications and the following sitecore certificates:
+
+Sitecore CEP 7 Developer Upgrade (UPG) - 2014
+Sitecore Advanced .NET Developer (AND) - 2012
+Sitecore DMS .NET Developer (DND) - 2012
+Sitecore OMS .NET Developer (OND) - 2011
+Sitecore CMS 6 Website .NET developer - 2009
+Sitecore CMS 6 Website HTML developer - 2009
+Sitecore V5.3 Certified Developer Level 1 - 2008
+Sitecore V5.3 Certified Developer Level 2 - 2008
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 168
+
+<image mediapath="" alt="Robbert Hack" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{8F47CB3A-8BB7-4EED-8097-29685AE007C8}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160409T090544Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bf3a14c3-e72c-47e2-896c-cd16f04d9e62
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160409T091623Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

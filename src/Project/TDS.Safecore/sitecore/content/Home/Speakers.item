@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+database: master
+path: /sitecore/content/Home/Speakers
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: Speakers
+master: {00000000-0000-0000-0000-000000000000}
+template: {76036F5E-CBCE-46D1-AF0A-4143F9B557AA}
+templatekey: Sample Item
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{EFCE1633-F024-4808-8B2C-67F258A562E3}
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 350
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{5B1D9ABF-75A6-4CB8-998E-B64D9A703ACB}" p:before="*" s:id="{D29557F8-AA5F-4A64-8F25-2356DBB787E2}" s:ph="header-top" /><r uid="{824BD343-61C9-476A-8DD6-AD404FC2478B}" p:after="*[1=2]" s:id="{6F9AF6BB-C438-44FF-BC7D-93B6A1715107}" s:ph="main-content" /></d></r>
+----version----
+language: en
+version: 1
+revision: 64ec5f41-aec4-44a8-a389-4f52a017b684
+
+----field----
+field: {75577384-3C97-45DA-A847-81B00500E250}
+name: Title
+key: title
+content-length: 8
+
+Speakers
+----field----
+field: {A60ACD61-A6DB-4182-8329-C957982CEC74}
+name: Text
+key: text
+content-length: 150
+
+WE BRING YOU THE BEST SPEAKERS FROM SITECORE AND THE SITECORE COMMUNITY!
+SUGCON Europe 2016 will be our biggest line-up yet with 16 MVP's presenting!
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160327T145757Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+64ec5f41-aec4-44a8-a389-4f52a017b684
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160407T174729Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

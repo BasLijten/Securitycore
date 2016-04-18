@@ -1,0 +1,81 @@
+----item----
+version: 1
+id: {66A38763-4C0C-45B8-8A9D-E2C9CC00A062}
+database: master
+path: /sitecore/content/Home/Speakers/Bas Lijten
+parent: {7151131B-DFB0-466F-80C0-7768AEBE324E}
+name: Bas Lijten
+master: {00000000-0000-0000-0000-000000000000}
+template: {EFCE1633-F024-4808-8B2C-67F258A562E3}
+templatekey: Speaker
+
+----version----
+language: en
+version: 1
+revision: 1b218fc0-9370-4d8c-a917-e7b0b7db2bc5
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 10
+
+Bas Lijten
+----field----
+field: {2DE241C8-95BF-4C9F-8CCE-35CE73167C1C}
+name: Name
+key: name
+content-length: 10
+
+Bas Lijten
+----field----
+field: {26E4EAAF-D260-4C0B-AF8C-B275E5250B4D}
+name: Details
+key: details
+content-length: 13
+
+Sitecore MVP 
+----field----
+field: {66E99AFA-DF66-4FD5-B70C-0527A22515C0}
+name: Biography
+key: biography
+content-length: 1174
+
+Bas Lijten is a Principal Architect at Achmea and Sitecore MVP with a very broad interest. Since 2007, the year that he got in touch with SharePoint (MOSS) 2007, he was involved in a lot of different projects, ranging from building new corporate intranets, developing collaboration solutions, create a new shared platform that must be able to host hundreds of WCM sites, to migrating existing platforms to new versions. From that experience, he got responsible for the whole governance on the Sitecore platform at Achmea: Architecture principles, Development guidelines, all the roles and responsibilities, deployment, et cetera.
+Parallel to the project, he did a lot on research on integrating IoT with Sitecore, integrating Claims based authentication and other fun and complicated challenges. And because he works on a “need to share” basis, he shares all that information with the communities, and product teams, because he believes that if you invest in others, in the end, you will get back more than double the investment.
+In his spare time, Bas speaks on conferences and tech-nights, likes to blog and studies a lot. Aside from technology, he likes football a lot.
+----field----
+field: {F4B8B06A-9128-4786-9C01-7695D4BC7E60}
+name: ProfilePicture
+key: profilepicture
+content-length: 166
+
+<image mediapath="" alt="bas lijten" width="" height="" hspace="" vspace="" showineditor="" usethumbnail="" src="" mediaid="{389178DE-6B42-4CD2-B2D7-5EFCA4577F77}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160327T152630Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1b218fc0-9370-4d8c-a917-e7b0b7db2bc5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160408T184734Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

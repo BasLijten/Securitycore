@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {9A9A3159-8E28-486E-B6ED-E6366BEBA1C9}
+database: master
+path: /sitecore/content/Home/Logout
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: Logout
+master: {00000000-0000-0000-0000-000000000000}
+template: {76036F5E-CBCE-46D1-AF0A-4143F9B557AA}
+templatekey: Sample Item
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 265
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{539B9FB1-3502-43FF-89A0-BBA09A0B55C7}"><p:d /></r><r uid="{BFFE4637-323C-4D21-BFB7-C140B78A0762}" s:id="{769319B0-1FA6-4FFC-9ED2-61219AB17059}" s:ph="main-content" /></d></r>
+----version----
+language: en
+version: 1
+revision: a725e44b-2a25-4875-a8a9-8453a579b2e3
+
+----field----
+field: {75577384-3C97-45DA-A847-81B00500E250}
+name: Title
+key: title
+content-length: 6
+
+Logout
+----field----
+field: {A60ACD61-A6DB-4182-8329-C957982CEC74}
+name: Text
+key: text
+content-length: 6
+
+Logout
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160326T150059Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a725e44b-2a25-4875-a8a9-8453a579b2e3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160326T150128Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

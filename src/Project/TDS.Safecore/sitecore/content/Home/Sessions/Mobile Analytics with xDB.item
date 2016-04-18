@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {524E2A5F-17C9-4800-95A8-CF093D2F4082}
+database: master
+path: /sitecore/content/Home/Sessions/Mobile Analytics with xDB
+parent: {14A7D534-3464-4BEE-84B9-334D984F1D64}
+name: Mobile Analytics with xDB
+master: {00000000-0000-0000-0000-000000000000}
+template: {9FE0C609-F841-43AD-A952-FEF80C14C570}
+templatekey: Session
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
+----version----
+language: en
+version: 1
+revision: 952c3178-518f-4e14-b4f3-7ba2e3207cd2
+
+----field----
+field: {BAA3327F-7280-4756-8C1B-6FC3F5A263F8}
+name: Title
+key: title
+content-length: 25
+
+Mobile Analytics with xDB
+----field----
+field: {7BA87A98-47A6-4AFA-AF80-0AAE78E3760A}
+name: Session Name
+key: session name
+content-length: 25
+
+Mobile Analytics with xDB
+----field----
+field: {C055AA9D-8A0F-4902-910B-7183249DDF4F}
+name: Session Description
+key: session description
+content-length: 157
+
+The mobile aspect of mobile analytics introduces an interesting challenge when collecting events, outcomes, and experiences while your users are on the move.
+----field----
+field: {4CC9D1FD-42B7-4B52-BBED-E6FB57A08F3F}
+name: Session Speaker
+key: session speaker
+content-length: 38
+
+{5657738E-0A58-432E-9802-57CB8BFD92AB}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160407T153013Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+952c3178-518f-4e14-b4f3-7ba2e3207cd2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160407T170046Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
