@@ -5,6 +5,7 @@ using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -15,12 +16,11 @@ namespace Safecore.Web.Controllers
 {
     public class CommentsController : Controller
     {        
-        private string connectionString = @"Data Source=.\;Initial Catalog=UserInteractions;Database=UserInteractions;uid=UserInteractionDB2;pwd=User12345DB";
         private UserInteractionContext db = new UserInteractionContext();
         // GET: Comments
         public ActionResult Index(string status)
         {
-
+            var connectionString = ConfigurationManager.ConnectionStrings["UserInteractionContext"];
             //var _status = new SqlParameter("status", status);
             var sqlQuery = "SELECT * FROM CommentModels";
             if (!String.IsNullOrEmpty(status))
@@ -30,7 +30,7 @@ namespace Safecore.Web.Controllers
 
 
             IList<CommentModel> comments = new List<CommentModel>();
-            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString.ConnectionString))
             {
                 sqlConnection1.Open();
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection1))
@@ -64,6 +64,7 @@ namespace Safecore.Web.Controllers
         }
         
         [HttpPost] 
+        [ValidateAntiForgeryToken]
         public ActionResult AddComment(CommentModel model)
         {
             if (ModelState.IsValid)

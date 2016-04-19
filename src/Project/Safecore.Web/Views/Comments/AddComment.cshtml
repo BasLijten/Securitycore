@@ -9,7 +9,7 @@
 @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
 {
     // deleted on purpose to show CSRF possibilities
-    //@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
     @Html.Sitecore().FormHandler()
     <div class="form-horizontal">
         <hr />

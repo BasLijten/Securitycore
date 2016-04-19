@@ -9,7 +9,7 @@ namespace Safecore.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Safecore.Web.DAL.UserInteractionContext context)

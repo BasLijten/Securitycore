@@ -4,6 +4,7 @@ using Sitecore.Mvc.Presentation;
 using SitecoreSecurity.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,12 +15,11 @@ namespace Evilcore.Web.Controllers
 {
     public class CommentsController : Controller
     {
-        private string connectionString = @"Data Source=.\;Initial Catalog=UserInteractions;Database=UserInteractions;uid=sa;pwd=12345";
-        private string connectionString2 = @"Data Source=.\;Initial Catalog=UserInteractions;Database=UserInteractions;uid=UserInteractionDB2;pwd=User12345DB";
         private UserInteractionContext db = new UserInteractionContext();
         // GET: Comments
         public ActionResult Index(string status)
         {
+            var connectionString = ConfigurationManager.ConnectionStrings["UserInteractionContext"];
             var sqlQuery = "SELECT * FROM CommentModels";
             if (!String.IsNullOrEmpty(status))
                 sqlQuery += String.Format(" WHERE Status like '{0}' ORDER BY Date DESC", status);
@@ -28,7 +28,7 @@ namespace Evilcore.Web.Controllers
 
 
             IList<CommentModel> comments = new List<CommentModel>();
-            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString))
+            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString.ConnectionString))
             {
                 sqlConnection1.Open();
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection1))
@@ -61,6 +61,7 @@ namespace Evilcore.Web.Controllers
 
         public ActionResult AllComments(string status)
         {
+            var connectionString = ConfigurationManager.ConnectionStrings["SafeUserInteractionContext"];
             var sqlQuery = "SELECT * FROM CommentModels";
             if (!String.IsNullOrEmpty(status))
                 sqlQuery += String.Format(" WHERE Status like '{0}' ORDER BY Date DESC", status);
@@ -69,7 +70,7 @@ namespace Evilcore.Web.Controllers
 
 
             IList<CommentModel> comments = new List<CommentModel>();
-            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString2))
+            using (SqlConnection sqlConnection1 = new SqlConnection(connectionString.ConnectionString))
             {
                 sqlConnection1.Open();
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, sqlConnection1))
