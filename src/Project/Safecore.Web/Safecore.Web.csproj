@@ -182,6 +182,7 @@
     <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <None Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\cropped-sugcon2016-siteicon.png" />
     <Content Include="images\Evilcore_Background.jpg" />
     <Content Include="images\Background.jpg" />
     <Content Include="images\sugcon-europe-2015-larskeynote.jpg" />
