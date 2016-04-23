@@ -1,9 +1,21 @@
-﻿@model ISpeakers
-    <ul>
-    @foreach (var item in Model.Children)
-    {
-        <li><a href="@item.Url">@item.Name</a> -  @item.Details</li>    
-    }
-</ul>
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<ISpeakers> 
+
+<div class="container">
+    <div class="session-details">
+        <div class="row">
+            @foreach (var item in Model.Children)
+            {
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    @RenderImage(item, m => m.ProfilePicture, new { W = 200, H = 200, Width = 200, Height = 200 })
+                    <a href="@item.Url"><h2>@item.Name</h2></a>
+                    <p>
+                        @item.Details <br />
+                    </p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
 
 

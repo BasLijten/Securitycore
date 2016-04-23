@@ -11,6 +11,10 @@ using System.Web;
 using Safecore.Web.Extensions;
 using System.Web.Mvc;
 using SitecoreSecurity.Web.Models;
+using Sitecore.Links;
+using Sitecore.Data;
+using Sitecore.Mvc.Configuration;
+using Sitecore.Analytics.Model.Entities;
 
 namespace Safecore.Web.Controllers
 {
@@ -27,6 +31,19 @@ namespace Safecore.Web.Controllers
         {
             this.ResetCurrentSession();
             var result = AuthenticationManager.Login(loginInfo.UserName, loginInfo.Password);
+            if(result)
+            {
+                var options = new UrlOptions
+                {
+                    AddAspxExtension = false,
+                    LanguageEmbedding = LanguageEmbedding.Never
+                };
+
+                var pathInfo = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(new ID("{AED2560D-4C6F-48E0-922D-CBCCCBF008D1}")), options);
+
+                return RedirectToRoute(MvcSettings.SitecoreRouteName, new { pathInfo = pathInfo.TrimStart(new char[] { '/' }) });
+
+            }
             return View();
         }
 
@@ -34,13 +51,26 @@ namespace Safecore.Web.Controllers
         {
             var site = Context.Site;
             var page = Context.Page;
-            var en = site.EnableAnalytics;
             bool IsActive = (Tracker.Current != null && Tracker.Current.IsActive);
             try
             {
-                if (IsActive)
+                if (IsActive && !identifier.ToLower().Contains("anonymous"))
                 {
                     Tracker.Current.Session.Identify(identifier);
+                    switch (identifier.ToLower())
+                    {
+                        case "extranet\\kam":
+                            SetContactCard("Notorious", "F.I.G.");
+                            break;
+                        case "extranet\\robbert":
+                            SetContactCard("Robbert", "Hack");
+                            break;
+                        case "extranet\\bas":
+                            SetContactCard("Bas", "Lijten");
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             catch (ItemNotFoundException ex)
@@ -49,18 +79,38 @@ namespace Safecore.Web.Controllers
                 Log.Error($"Could not identify the user '{identifier}'", ex, this);
             }
         }
-        // not needed: manually provisioned via admin screen
-        //public ActionResult Register()
-        //{
-        //    // do we need this? manually adding accounts?
-        //    return View();
-        //}
+        private void SetContactCard(string firstName, string lastName)
+        {
+            var contact = Tracker.Current.Contact.GetFacet<IContactPersonalInfo>("Personal");
 
-        //[HttpPost]
-        //public ActionResult Register(RegistrationInfo registrationInfo)
-        //{
-        //    return View();
-        //}
+            contact.FirstName = firstName;
+            contact.Surname = lastName;
+            if (firstName.ToLower() == "robbert")
+            {
+                SetCountry("The Netherlands");
+            }
+
+            if (firstName.ToLower() == "bas")
+            {
+                SetCountry("Brabant ;)");
+            }
+
+            if (firstName.ToLower() == "notorious")
+            {
+                SetCountry("Portland Oregon, USA");
+            }
+
+        }
+
+        private void SetCountry(string country)
+        {
+            string addressType = "primary";
+            var addresses = Tracker.Current.Contact.GetFacet<IContactAddresses>("Addresses");
+            if (!addresses.Entries.Contains("primary"))
+                addresses.Entries.Create("primary");
+            var primaryAddress = addresses.Entries["primary"];
+            primaryAddress.Country = country;
+        }//}
 
         public ActionResult Logout()
         {

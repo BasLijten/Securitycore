@@ -1,8 +1,12 @@
 ﻿using Sitecore;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Model.Entities;
+using Sitecore.Data;
+using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Exceptions;
+using Sitecore.Links;
+using Sitecore.Mvc.Configuration;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Security.Authentication;
 using SitecoreSecurity.Web.Models;
@@ -29,9 +33,19 @@ namespace Evilcore.Web.Controllers
             if(result)
             {
 
-                IdentifyContact(Sitecore.Context.User.Name);                
-            }
+                IdentifyContact(Sitecore.Context.User.Name);
+                var options = new UrlOptions
+                {
+                    AddAspxExtension = false,
+                    LanguageEmbedding = LanguageEmbedding.Never
+                };
+
+                var pathInfo = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(new ID("{AED2560D-4C6F-48E0-922D-CBCCCBF008D1}")), options);
+
+                return RedirectToRoute(MvcSettings.SitecoreRouteName, new { pathInfo = pathInfo.TrimStart(new char[] { '/' }) });
             
+            }
+
             return View();
         }
 
